@@ -21,10 +21,10 @@ describe('Testando MeuPC.NET', () => {
     cy.get('input[name="nome"]').type('Kaique Teste')
 
     //Preenchendo o campo email do cadastro com o valor johndoe@exemple
-    cy.get('input[name="email"]').type('johndoe@exemple')
+    cy.get('input[name="email"]').type('testecypress@tuamaeaquelaursa.com')
 
     //Preenchendo o campo senha do cadastro com o valor 12345678
-    cy.get('input[placeholder="Defina uma senha"]').type('12345678')
+    cy.get('input[placeholder="Defina uma senha"]').type('testecypress')
 
     //Clicando no checkbox  de aceitar os termos
 
@@ -36,6 +36,8 @@ describe('Testando MeuPC.NET', () => {
 
   // Verificando se chegamos na tela final do cadastro
   cy.contains('Escolha seu nome de usuario').should('be.visible')
+
+  cy.contains('PC atual de TesteCypress')
 
   })
 })
